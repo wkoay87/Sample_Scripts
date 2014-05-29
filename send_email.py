@@ -1,3 +1,11 @@
+# Import email items
+import smtplib
+from email.MIMEMultipart import MIMEMultipart
+from email.MIMEBase import MIMEBase
+from email.MIMEText import MIMEText
+from email.Utils import COMMASPACE, formatdate
+from email import Encoders
+
 def send_mail(send_from, send_to,send_cc, subject, text, files=[],server="localhost"):    
     assert type(send_to)==list    
     assert type(files)==list
